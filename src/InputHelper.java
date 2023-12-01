@@ -177,5 +177,14 @@ public class InputHelper {
 
         return input;
     }
+
+    public static double CtoF(double celsius){
+        double fahrenheit = 0;
+
+        fahrenheit = (celsius * 1.8) + 32;
+
+
+        return fahrenheit;
+    }
 }
 

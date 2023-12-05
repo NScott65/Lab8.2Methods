@@ -178,6 +178,34 @@ public class InputHelper {
         return input;
     }
 
+    public static String prettyHeader(String msg){
+        int width = 60;
+
+        for (int i = 0; i < width; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+
+
+        int spacesBefore = ((width - msg.length()) / 2) - 3;
+        int spacesAfter = width - msg.length() - spacesBefore - 6;
+        System.out.print("***");
+        for (int i = 0; i < spacesBefore; i++) {
+            System.out.print(" ");
+        }
+        System.out.print(msg);
+        for (int i = 0; i < spacesAfter; i++) {
+            System.out.print(" ");
+        }
+        System.out.println("***");
+
+        for (int i = 0; i < width; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+        return msg;
+    }
+
     public static double CtoF(double celsius){
         double fahrenheit = 0;
 
